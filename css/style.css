@@ -1,0 +1,105 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #2c0404;
+}
+
+header {
+    background-color: #002fa7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #2c0404;
+}
+
+nav li {
+    float: right;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+nav a:hover:not(.active) {
+    background-color: grey;
+    color: #2c0404;
+}
+
+/* Active navigation item */
+.active a {
+    background-color: #002fa7;
+    color: white;
+}
+
+/* Skip to content */
+a[href="#main"]:focus {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 2;
+}
+
+a[href="#main"] {
+    display: none;
+}
+
+h1{
+    font-size: 50px;
+}
+
+/* Grid layout for main content */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+h2, h3 {
+    font-size: 30px;
+    text-align: left;
+}
+
+main div {
+    background-color: #f5f3f3;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+}
+
+main div img, main div video {
+    display: block;
+    margin: 0 auto;
+    border-radius: 2px;
+    max-width: 100%;
+    height: auto;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+}
+
+img, video {
+    border-radius: 2px;
+    max-width: 100%;
+    height: auto;
+}
+
+p, ul, img, video {
+    margin-bottom: 10px;
+}
