@@ -1,4 +1,3 @@
-/* General styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -35,33 +34,35 @@ nav a:hover:not(.active) {
     color: #2c0404;
 }
 
-/* Active navigation item */
+/* make active navigation */
 .active a {
     background-color: #002fa7;
     color: white;
 }
 
-/* Skip to content */
-a[href="#main"]:focus {
-    display: block;
+/* revise of skip to main content */
+a[href="#main"] {
     position: absolute;
-    top: 5px;
+    top: -50px;  /* Move it off-screen initially */
     left: 5px;
     background: #000;
     color: white;
-    padding: 8px;
+    padding: 5px;
     z-index: 2;
+    transition: top 0.3s ease;
 }
 
-a[href="#main"] {
-    display: none;
+a[href="#main"]:focus {
+    display: block;
+    position: static;
+    top: 5px;  /* Move it back on-screen when focused */
 }
 
 h1{
     font-size: 50px;
 }
 
-/* Grid layout for main content */
+/* create grid layout for main */
 main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -74,6 +75,7 @@ h2, h3 {
     text-align: left;
 }
 
+/* create shadow */
 main div {
     background-color: #f5f3f3;
     padding: 20px;
